@@ -1,0 +1,29 @@
+.dog-image {
+    height: 300px;
+    width: 300px;
+}
+
+.dog-image:hover {
+    border-radius: 50%;
+}
+
+
+
+.Dog-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.next-btn {
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.next-btn:hover {
+    background-color: tomato;
+    transition: 0.5s ease-in-out;
+}
