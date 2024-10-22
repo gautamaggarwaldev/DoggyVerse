@@ -8,7 +8,7 @@ function DogApi() {
 
     const [dogImage, setDogImage] = useState();
     const [isLoading, setIsLoading] = useState(true);
-    const [breed, setBreed] = useState('');
+    const [dogName, setDogName] = useState('');
     
 
     function extractBreedFromUrl(url) {
@@ -24,7 +24,7 @@ function DogApi() {
         const response = await axios.get(DogUrl);
         console.log("data " + response.data.message);
         setDogImage(response.data.message);
-        setBreed(extractBreedFromUrl(response.data.message))
+        setDogName(extractBreedFromUrl(response.data.message))
         setIsLoading(false);
 
     }
@@ -45,7 +45,7 @@ function DogApi() {
                     <img className="dog-image" src={dogImage} alt="Random Dog" />
                 </div>
             )}
-            <span>Dog Breed: {breed}</span>
+            <span>Dog Breed: {dogName}</span>
             <button className="next-btn" onClick={fetchDogImage}>Next Dog</button>
 
         </div>
